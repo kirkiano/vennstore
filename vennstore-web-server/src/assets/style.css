@@ -1,0 +1,47 @@
+
+html {
+  box-sizing: border-box;
+}
+
+
+*,
+*::before,
+*::after
+{
+  box-sizing: inherit;
+}
+
+
+body {
+  min-height: 100vh;
+}
+
+
+header {
+  h1 {
+    text-align: center;
+    margin: 0;
+  }
+
+  hr {
+    border: 1px solid pink;
+    width: 65%;
+  }
+}
+
+
+main.select-tags {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  justify-items: center;
+
+  form {
+    flex: 1;
+  }
+
+  .selected-tags {
+    flex: 5;
+  }
+}
