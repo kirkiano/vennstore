@@ -2,6 +2,7 @@
 resolver = "2"
 
 members = [
-    "vennstore-cmdline",
-    "vennstore-web-server",
+    "util",
+    "vs",
+    "vs-cmdline",
 ]

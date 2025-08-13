@@ -1,5 +1,3 @@
 # Vennstore
 
-## Tentative Goals
-
-* No Javascript (or Typescript, or any dynamic on the front end)
+A utility for storing and tagging files.
