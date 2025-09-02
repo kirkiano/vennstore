@@ -12,6 +12,7 @@ pub mod traits;
 mod root;
 mod sqlite;
 mod sqlite_tree;
+mod vs;
 
 #[cfg(test)]
 mod test_utils;
@@ -24,6 +25,7 @@ pub use tree::Tree;
 pub use root::RootPath;
 pub use sqlite_tree::{SqliteFileTree, Result, Error};
 pub use traits::Store;
+pub use vs::VSSqliteTree;
 
 
 /////////////////////////////////////////////////////////////////////
