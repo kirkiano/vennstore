@@ -8,11 +8,11 @@ mod constants;
 mod hash;
 mod tag;
 pub mod tree;
+pub mod staging;
 pub mod traits;
 mod root;
 mod sqlite;
 mod sqlite_tree;
-mod vs;
 
 #[cfg(test)]
 mod test_utils;
@@ -22,10 +22,10 @@ pub use constants::*;
 pub use hash::Hash;
 pub use tag::Tag;
 pub use tree::Tree;
+pub use staging::Staging;
 pub use root::RootPath;
 pub use sqlite_tree::{SqliteFileTree, Result, Error};
 pub use traits::Store;
-pub use vs::VSSqliteTree;
 
 
 /////////////////////////////////////////////////////////////////////

@@ -6,7 +6,6 @@ mod exists;
 mod delete;
 mod store;
 
-
 pub use insert::Insert;
 pub use remove::Remove;
 pub use lookup::Lookup;
