@@ -3,6 +3,7 @@ use crate::Hash;
 use util::{Filename, ProperPathBuf};
 
 
+
 /// The root of the file tree
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct Tree(ProperPathBuf);

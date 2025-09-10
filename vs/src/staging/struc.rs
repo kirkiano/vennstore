@@ -8,7 +8,7 @@ pub struct Staging(PathBuf);
 
 impl fmt::Display for Staging {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        self.0.display().fmt(f)
+        write!(f, "staging area at {}", self.0.display())
     }
 }
 

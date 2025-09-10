@@ -12,3 +12,4 @@ rusqlite = "0.37.0"
 sha1 = "0.10.6"
 thiserror = "2.0.14"
 util = { path = "../util" }
+walkdir = "2.5.0"
