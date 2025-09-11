@@ -11,4 +11,4 @@ pub use error::Error;
 pub use struc::SqliteFileTree;
 
 
-pub type Result<T> = std::result::Result<T, Error>;
+type Result<T> = std::result::Result<T, Error>;

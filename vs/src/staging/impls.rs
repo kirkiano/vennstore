@@ -3,7 +3,7 @@ use std::{ffi::OsString,
           path::{Path, PathBuf}};
 
 use util::{PathOf, Filename};
-use crate::traits::Lookup;
+use crate::{Result, Error, traits::Lookup};
 use super::Staging;
 
 
@@ -15,6 +15,15 @@ impl PathOf<Filename> for Staging {
         let fos: &OsString = f.as_ref();
         pb.push(fos);
         pb
+    }
+}
+
+
+impl Lookup<Filename, PathBuf, Error> for Staging {
+    fn lookup(&self, f: &Filename) -> Result<PathBuf> {
+        let p = self.path_of(f);
+        if fs::exists(&p)? { Ok(p) }
+        else { Err(Error::NoSuchFilename(f.clone())) }
     }
 }
 
