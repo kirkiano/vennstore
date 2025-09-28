@@ -1,7 +1,6 @@
 use clap::Parser;
 
-use util::ProperPathBuf;
-use vs::{Result, SFT};
+use vs::{Result, RootPath2, SFT2};
 use vs_cmdline::{Args, exec};
 
 
@@ -13,8 +12,8 @@ fn main() -> Result<()> {
     let cmd = cargs.command;
     println!("root: {}", cargs.root.display());
     println!("main: {:?}", cmd);
-    let root = ProperPathBuf::try_from(cargs.root).unwrap();
-    let sft = SFT::create_idempotently(root).unwrap();
+    let root = RootPath2::from(cargs.root);
+    let sft = SFT2::create_idempotently(root).unwrap();
     if let Err(e) = exec(&sft, cmd) { println!("{}", e); }
     Ok(())
 }

@@ -14,8 +14,10 @@ pub mod tree;
 pub mod tree2;
 pub mod traits;
 mod root;
+mod root2;
 mod sqlite;
 mod sqlite_tree;
+mod sqlite_tree2;
 
 #[cfg(test)]
 mod test_utils;
@@ -29,7 +31,9 @@ pub use staging::Staging;
 pub use tree::Tree;
 pub use tree2::Tree2;
 pub use root::RootPath;
+pub use root2::RootPath2;
 pub use sqlite_tree::SqliteFileTree;
+pub use sqlite_tree2::SqliteFileTree2;
 pub use traits::Store;
 
 pub type Result<T> = std::result::Result<T, Error>;
@@ -43,3 +47,4 @@ type FT = (Filename, Tag);
 
 
 pub type SFT = SqliteFileTree;
+pub type SFT2 = SqliteFileTree2;
